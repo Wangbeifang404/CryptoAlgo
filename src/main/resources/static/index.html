@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>密码算法演示平台</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>密码算法演示平台</h1>
+    <p style="text-align: center; color: #666; font-size: 16px; margin-top: -10px;">
+        王鑫 - 2020211837
+    </p>
+    <!-- 一级目录 -->
+    <div class="service-tabs">
+        <button onclick="selectService('symmetric')">对称加密</button>
+        <button onclick="selectService('hash')">哈希算法</button>
+        <button onclick="selectService('encoding')">编码</button>
+        <button onclick="selectService('asymmetric')">公钥密码</button>
+    </div>
+
+    <!-- 二级算法选择 -->
+    <div class="algorithm-select">
+        <label>选择算法：</label>
+        <select id="algorithmSelect" onchange="resetFields()"></select>
+    </div>
+
+    <!-- 输入输出区域 -->
+    <div class="crypto-area">
+        <div>
+            <label for="inputText">原文 / 输入：</label>
+            <textarea id="inputText" placeholder="请输入明文、签名原文等内容"></textarea>
+        </div>
+        <div>
+            <label for="outputText">密文 / 输出：</label>
+            <textarea id="outputText" readonly placeholder="加密/编码/哈希结果将在此处显示"></textarea>
+        </div>
+    </div>
+
+    <!-- 密钥输入 + 控制按钮 -->
+    <div class="options">
+
+        <!-- 签名输入框（仅对于 ECDSA 验证需要） -->
+        <input type="text" id="signatureInput" placeholder="请输入签名" />
+
+        <!-- 密钥输入框 -->
+        <input type="text" id="keyInput" placeholder="可选：密钥 / 盐值" />
+        <div class="buttons">
+            <button onclick="run('encrypt')">执行</button>
+            <button onclick="run('decrypt')">反向</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

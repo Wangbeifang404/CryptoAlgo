@@ -1,0 +1,107 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.service-tabs button {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.service-tabs button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.algorithm-select {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.crypto-area {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.crypto-area > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  height: 160px;
+  padding: 10px;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#keyInput {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons button:last-child {
+  background-color: #e67e22;
+}
+
+#signatureInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: none; /* 默认隐藏 */
+}
+
