@@ -26,7 +26,8 @@
    cd your-project-directory
    
 2. 构建Spring Boot应用：
+   ```bash
    mvn clean package
 
-3. 运行应用
+4. 运行应用
      
